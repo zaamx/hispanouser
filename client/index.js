@@ -1,4 +1,4 @@
 import './promise-polyfill'
-import {app} from './app'
+import {hispauser} from './app'
 
-app.$mount('#app')
+hispauser.$mount('#app')

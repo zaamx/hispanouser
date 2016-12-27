@@ -6,6 +6,7 @@ import store from './store'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import VueResource from 'vue-resource'
+import pageContent from './components/pageContent';
 
 sync(store, router)
 
@@ -19,10 +20,22 @@ Vue.material.registerTheme('default', {
   background: 'grey'
 })
 
-const app = new Vue({
+
+const hispauser = new Vue({
   router,
   store,
   ...App
 })
 
-export {app, router, store}
+
+
+export {hispauser, router, store}
+
+router.beforeEach((to, from, next) => {
+	Vue.nextTick(function () {
+	  // DOM updated
+	  // console.log(router.app) // prints a Vue$2 object
+	  hispauser.closeSidenav();
+	  next();
+	})
+})

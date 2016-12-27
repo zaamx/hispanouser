@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-
-    <router-view></router-view>
-
-    <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
+    <md-sidenav class="md-left" ref="main-sidebar">
       <!-- Top del sidebar nav -->
       <sidenavTop></sidenavTop>
 
@@ -11,25 +8,30 @@
       <sidenavList></sidenavList>
 
     </md-sidenav>
+    <div class="fab-container">
+      <md-button class="md-fab">
+        <md-icon>add</md-icon>
+      </md-button>  
+    </div>
+    
+    <router-view></router-view>  
   </div>
 </template>
 <script type="text/javascript">
+  // import Vue from 'vue';
+
   import sidenavTop from './sidenavTop' 
   import sidenavList from './sidenavList' 
 
+
+
   export default {
   methods: {
-    toggleLeftSidenav() {
-      this.$refs.leftSidenav.toggle();
-    },
-    open(ref) {
-      console.log('Opened: ' + ref);
-    },
-    close(ref) {
-      console.log('Closed: ' + ref);
+    toggleSidenav() {
+      this.$refs['main-sidebar'].toggle();
     },
     closeSidenav() {
-      this.$refs.leftSidenav.close();
+      this.$refs['main-sidebar'].close();
     }
   }
   , components: {
@@ -40,7 +42,22 @@
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '../stylesheets/mixins/_spacing.scss';
+@import '../stylesheets/mixins/_resetText.scss';
+
+#app {
+  display: flex;
+  flex-flow: column;
+}
+.contenido {
+  max-width:1200px;
+  padding-top:20px;
+  margin: 0 auto;
+  flex: 1;
+  flex-flow: column;
+  // position: relative;
+}
 
 .page {
   text-align: center;
@@ -50,5 +67,10 @@
     padding: 3px 5px;
     border-radius: 2px;
   }
+}
+.fab-container {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
 }
 </style>
