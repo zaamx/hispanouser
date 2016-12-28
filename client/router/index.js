@@ -4,6 +4,7 @@ import Home from '../views/Home'
 import Login from '../views/Login'
 import Registro from '../views/Registro'
 import LlamaDoctor from '../views/LlamaDoctor'
+import Beneficios from '../views/Beneficios'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/llamadoctor',
       title: 'le login',
       component: LlamaDoctor
+    },
+    {
+      path: '/beneficios/:beneficio',
+      title: 'le login',
+      component: Beneficios
     }
   ]
 })

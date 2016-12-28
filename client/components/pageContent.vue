@@ -22,18 +22,14 @@
 
     <div class="header-visual">
       <div class="contenido">
-        <h1 class="md-display-1 padding-m-top padding-m-bottom">
+        <h1 class="md-display-1 padding-m-top padding-m-bottom" v-if="pageTitle">
           {{ pageTitle }}
         </h1>
-        <p class="md-subheading">
+        <p class="md-subheading" v-if="pageDescription">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam animi labore recusandae corporis possimus, facilis veritatis ut dolore, voluptate mollitia.
         </p>
       </div>
-      
-
-
     </div>
-
 
     <div class="contenido">
       <slot></slot>  
@@ -71,7 +67,8 @@ import App from './App'
   
   export default {
     props: {
-      pageTitle: String,
+      pageTitle: null,
+      pageDescription: null
     }
     , methods: {
       toggleSidenav() {

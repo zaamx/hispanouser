@@ -14,9 +14,9 @@
     <!-- ciclo de modulos -->
 
     <md-list-item v-for="feature in features">
-      <router-link to="{{ feature.mainroute }} ">
+      <router-link :to="{path: '/beneficios/' +feature.mainroute}">
         <md-icon>move_to_inbox</md-icon>
-        <span>{{ feature.mainroute }}</span>
+        <span>{{ feature.title }}</span>
       </router-link>
           
     </md-list-item>

@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+
 Vue.use(Vuex)
 
 const state = {
   count: 0,
-  features: [
-  {
+  features: [{
+    id:0,
+    done: true,
     title: 'Llama al Doctor',
     subtitle: 'Lorem ipsum dolor.',
     description: 'Lorem ipsum dolor sit.',
@@ -25,8 +27,8 @@ const state = {
         console.log("2");
       }
     }]
-  },
-  {
+  },{
+    id:1,
     title: 'Red de Descuentos',
     subtitle: 'Lorem ipsum dolor.',
     description: 'Lorem ipsum dolor sit.',
@@ -45,8 +47,8 @@ const state = {
         console.log("2");
       }
     }]
-  },
-  {
+  },{
+    id:2,
     title: 'Salud Dental',
     subtitle: 'Lorem ipsum dolor.',
     description: 'Lorem ipsum dolor sit.',
@@ -65,8 +67,8 @@ const state = {
         console.log("2");
       }
     }]
-  },
-  {
+  },{
+    id:3,
     title: 'Salud Visual',
     subtitle: 'Lorem ipsum dolor.',
     description: 'Lorem ipsum dolor sit.',
@@ -85,8 +87,8 @@ const state = {
           console.log("2");
         }
       }]
-  },
-  {
+  },{
+    id:4,
     title: 'Repatriación funeraria',
     subtitle: 'Lorem ipsum dolor.',
     description: 'Lorem ipsum dolor sit.',
@@ -105,9 +107,7 @@ const state = {
         console.log("2");
       }
     }]
-
-  }
-  ]
+  }]
 }
 
 const mutations = {
@@ -117,6 +117,14 @@ const mutations = {
   DECREMENT(state) {
     state.count--
   }
+}
+const getters = {
+  doneTodos: state => {
+      var url = state.route.params.beneficio
+      // return url
+      return state.features.filter(feature => feature.mainroute === url)
+  },
+  currentUrl: state => state.route.params.beneficio
 }
 
 const actions = {
@@ -130,6 +138,7 @@ const actions = {
 const store = new Vuex.Store({
   state,
   mutations,
+  getters,
   actions
 })
 

@@ -13,8 +13,9 @@
         <md-icon>add</md-icon>
       </md-button>  
     </div>
-    
-    <router-view></router-view>  
+    <transition >
+      <router-view class="view"></router-view>  
+    </transition>
   </div>
 </template>
 <script type="text/javascript">
@@ -58,7 +59,12 @@
   flex-flow: column;
   // position: relative;
 }
-
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-active {
+    opacity: 0
+}
 .page {
   text-align: center;
   /* nesting for the need to test postcss */
