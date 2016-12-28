@@ -1,88 +1,8 @@
 <template>
 	<pageContent pageTitle="Mi membresía">
 
-		<md-layout md-gutter >
-			<!-- <md-layout md-flex-offset="25" md-flex="50"> -->
-			<md-layout>
-				<md-card md-with-hover>
-					<md-card-media>
-						<img src="happy-woman-40s.jpg" alt="People">
-					</md-card-media>
-
-					<md-card-header>
-						<md-avatar>
-							<img src="https://placeimg.com/40/40/people/5" alt="People">
-							<!-- <img src="assets/avatar.png" alt="People"> -->
-						</md-avatar>
-
-						<div class="md-title">Llama al Doctor</div>
-						<div class="md-subhead">Subtitle here</div>
-					</md-card-header>
-
-					<md-card-content>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea nostrum.
-					</md-card-content>
-
-					<md-card-actions>
-						<md-button>Action</md-button>
-						<md-button>Action</md-button>
-					</md-card-actions>
-				</md-card>
-			</md-layout>
-			<md-layout>
-				<md-card md-with-hover>
-					<md-card-media>
-						<img src="happy-woman-40s.jpg" alt="People">
-					</md-card-media>
-
-					<md-card-header>
-						<md-avatar>
-							<img src="https://placeimg.com/40/40/people/5" alt="People">
-							<!-- <img src="assets/avatar.png" alt="People"> -->
-						</md-avatar>
-
-						<div class="md-title">Llama al Doctor</div>
-						<div class="md-subhead">Subtitle here</div>
-					</md-card-header>
-
-					<md-card-content>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea nostrum.
-					</md-card-content>
-
-					<md-card-actions>
-						<md-button>Action</md-button>
-						<md-button>Action</md-button>
-					</md-card-actions>
-				</md-card>
-			</md-layout>
-			<md-layout>
-				<md-card md-with-hover>
-					<md-card-media>
-						<img src="happy-woman-40s.jpg" alt="People">
-					</md-card-media>
-
-					<md-card-header>
-						<md-avatar>
-							<img src="https://placeimg.com/40/40/people/5" alt="People">
-							<!-- <img src="assets/avatar.png" alt="People"> -->
-						</md-avatar>
-
-						<div class="md-title">Llama al Doctor</div>
-						<div class="md-subhead">Subtitle here</div>
-					</md-card-header>
-
-					<md-card-content>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea nostrum.
-					</md-card-content>
-
-					<md-card-actions>
-						<md-button>Action</md-button>
-						<md-button>Action</md-button>
-					</md-card-actions>
-				</md-card>
-			</md-layout>
-			
-		</md-layout>
+		<featureList>
+		</featureList>
 
 		<h1 class="md-display-1 padding-m-top padding-m-bottom">Mis tarjetas</h1>
 
@@ -165,11 +85,16 @@
 
 
 
-<script>import pageContent from 'components/pageContent'
+<script>
+
+import pageContent from 'components/pageContent'
+import featureList from 'components/featureList'
+
 
 export default {
 	components: {
-		pageContent
+		pageContent,
+		featureList
 	}
 }
 </script>

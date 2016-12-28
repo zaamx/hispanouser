@@ -11,44 +11,25 @@
       </router-link>
     </md-list-item>
 
-    <md-list-item >
-      <router-link to="/llamadoctor">
-        <md-icon>move_to_inbox</md-icon> <span>Llama al Doctor</span>
-      </router-link>
-    </md-list-item>
+    <!-- ciclo de modulos -->
 
-    <md-list-item >
-      <router-link to="/ingresar">
-        <md-icon>move_to_inbox</md-icon> <span>Red de Descuentos</span>
+    <md-list-item v-for="feature in features">
+      <router-link to="{{ feature.mainroute }} ">
+        <md-icon>move_to_inbox</md-icon>
+        <span>{{ feature.mainroute }}</span>
       </router-link>
-    </md-list-item>
-
-    <md-list-item >
-      <router-link to="/ingresar">
-        <md-icon>move_to_inbox</md-icon> <span>Salud Dental</span>
-      </router-link>
-    </md-list-item>
-
-    <md-list-item >
-      <router-link to="/ingresar">
-        <md-icon>move_to_inbox</md-icon> <span>Salud Visual</span>
-      </router-link>
-    </md-list-item>
-
-    <md-list-item >
-      <router-link to="/ingresar">
-        <md-icon>move_to_inbox</md-icon> <span>Repatriación funeraria</span>
-      </router-link>
+          
     </md-list-item>
 
   </md-list>
 </template>
 <script >
-export default {
-  data() {
-    return{
-      contenido: 'Hello'
+
+  export default {
+    data: function () {
+      return {
+        features : this.$store.state.features
+      }
     }
   }
-}
 </script>
