@@ -11,7 +11,7 @@
 				</div>
 			</md-card-header-text>
 
-			
+
 		</md-card-header>
 
 		<md-card-actions>

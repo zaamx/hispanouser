@@ -11,18 +11,18 @@
     <div class="fab-container">
       <md-button class="md-fab">
         <md-icon>add</md-icon>
-      </md-button>  
+      </md-button>
     </div>
     <transition >
-      <router-view class="view"></router-view>  
+      <router-view class="view"></router-view>
     </transition>
   </div>
 </template>
 <script type="text/javascript">
   // import Vue from 'vue';
 
-  import sidenavTop from './sidenavTop' 
-  import sidenavList from './sidenavList' 
+  import sidenavTop from './sidenavTop'
+  import sidenavList from './sidenavList'
 
 
 
@@ -44,6 +44,7 @@
 </script>
 
 <style lang="scss">
+
 @import '../stylesheets/mixins/_spacing.scss';
 @import '../stylesheets/mixins/_resetText.scss';
 
